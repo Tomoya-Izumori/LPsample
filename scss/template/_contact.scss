@@ -1,0 +1,92 @@
+.p-contact {
+  &__content {
+    &__form {
+      width: 100%;
+      height: auto;
+      border: 1px solid #dedede;
+      padding: 4rem 4rem;
+      background: #ffffff;
+
+      &__row {
+        position: relative;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.l-form {
+
+  &-select,
+  &-input,
+  &-area {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border: 1px solid #d5d5d5;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.25rem;
+    background: #ffffff;
+  }
+
+  &-select {
+    cursor: pointer;
+  }
+}
+
+.l-form-label {
+  display: block;
+  font-size: 1.4rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.l-form-required {
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: "必須";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 1rem);
+    font-size: 1rem;
+    width: 3.2rem;
+    padding: 0.25rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+}
+
+.l-form-select__arrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  display: inline-block;
+  width: 1rem;
+  height: 0.625rem;
+  background: #000;
+  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  pointer-events: none;
+}
+
+.l-form-submit {
+  display: block;
+  width: 30rem;
+  max-width: 100%;
+  height: 4.5rem;
+  margin: 0 auto;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}

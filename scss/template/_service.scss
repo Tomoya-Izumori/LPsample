@@ -1,0 +1,33 @@
+.p-service {
+
+  &__list {
+    margin-top: 9rem;
+
+    .slick-dots {
+      bottom: 2rem !important;
+    }
+
+    &__item {
+      position: relative;
+      height: calc(100vh - 10rem);
+
+      &--img {
+        width: 100%;
+        aspect-ratio: 16/10;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        border-radius: 8%;
+        padding: 0 1rem;
+      }
+
+      &--desc {
+        margin-bottom: 1rem;
+      }
+
+      &--skill {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/* mixin breakpoint*/
+
+$BREAKPOINT_PC: 1366px;
+$BREAKPOINT_SP: 768px;
+
+@mixin ov_pc {
+  @media screen and (min-width: $BREAKPOINT_PC) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (max-width: $BREAKPOINT_PC) {
+    @content;
+  }
+}
+
+@mixin ov-sp {
+  @media screen and (min-width: $BREAKPOINT_SP) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: $BREAKPOINT_SP) {
+    @content;
+  }
+}
+
+/* mixin font*/
+
+@mixin f-pop {
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin f-sans {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@mixin f-serif {
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* mixin display-none*/
+
+
+.sp-none {
+  @include sp {
+    display: none;
+  }
+}
+
+.pc-none {
+  @include ov-sp {
+    display: none;
+  }
+}
+
+/* mixin direction*/
+
+@mixin center($direction) {
+  position: absolute;
+
+  @if $direction==xy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @else if $direction==x {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @else if $direction==y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

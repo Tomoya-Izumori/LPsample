@@ -1,0 +1,100 @@
+@use "global" as *;
+
+$textcolor-dark: #333;
+$base-color: #fff;
+
+//font
+
+.f-serif {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.f-sans {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.f-pop {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 0.7320644217vw; //1rem = 10px
+  font-family: "Noto Sans JP", sans-serif;
+  color: $textcolor-dark;
+
+  @include sp {
+    font-size: 2.666666667vw;
+  }
+
+  @include ov-pc {
+    font-size: 67.5%;
+  }
+}
+
+section {
+  height: 180vh;
+  display: block;
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+}
+
+h1 {
+  @include sp {
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: calc(3.6rem * 1.25);
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {}
+
+p {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+
+.container {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.sticky-wrapper {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.bg-light {
+  background-color: #f0f0f0;
+}
+
+.bg-dark {
+  background-color: #333;
+}
+
+.section__header {
+  margin-bottom: 2rem;
+
+  &--h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+
+    &--ja {
+      display: block;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
