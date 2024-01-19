@@ -1,4 +1,4 @@
-<header class="l-header">
+<header id="js-change-color" class="l-header">
     <div class="l-container">
         <a href="<?php echo $homeUrl; ?>" class="l-header--logo">GITEC GLOBAL TEAM</a>
         <div id="js-open-btn" class="l-header__nav__btn">

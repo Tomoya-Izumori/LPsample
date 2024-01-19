@@ -50,7 +50,7 @@ if ($posts) :
             // 抜粋整形
             $limit = 70;
             if (mb_strlen($contents) > $limit) {
-              $contents = mb_substr($contents, 0, $limit) . '･･･';
+              $contents = mb_substr($contents, 0, $limit, "utf-8") . '･･･';
             }
           ?>
 

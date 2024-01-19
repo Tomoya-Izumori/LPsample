@@ -110,7 +110,19 @@ p {
   background-color: #f0f0f0;
 }
 
-.c-page {
+.p-page {
+  .l-header {
+    &--logo {
+      color: #333333 !important;
+    }
+    &__nav {
+      &__btn {
+        &--bar {
+          background-color: #333333 !important;
+        }
+      }
+    }
+  }
   &-title {
     margin-bottom: 2.4rem;
     h1 {

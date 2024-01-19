@@ -68,7 +68,7 @@ include 'head.php'; // head.php の読み込み
 <!-- 特定のページでのみ読み込むスタイルシートなどがあればここに追加 -->
 </head>
 
-<body>
+<body class="p-page">
 
     <?php include 'template/header.php'; ?>
 
@@ -91,12 +91,15 @@ include 'head.php'; // head.php の読み込み
                                 <div class="p-news-editor">
                                     <?php echo $content; ?>
                                 </div>
+                                <div class="p-news__back">
+                                    <a href="<?php echo $homeUrl; ?>/news">一覧へ戻る</a>
+                                </div>
                             </div>
                         </div>
 
                     <?php elseif ($is_archive) : ?>
 
-                        <div class="c-page-title">
+                        <div class="p-page-title">
                             <h1>NEWS<span>新着情報</span></h1>
                         </div>
 
@@ -125,7 +128,7 @@ include 'head.php'; // head.php の読み込み
                                 // 抜粋整形
                                 $limit = 70;
                                 if (mb_strlen($contents) > $limit) {
-                                    $contents = mb_substr($contents, 0, $limit) . '･･･';
+                                    $contents = mb_substr($contents, 0, $limit, "utf-8") . '･･･';
                                 }
                             ?>
                                 <a href="<?php echo $homeUrl . '/news?id=' . $id; ?>" class="p-news__item">

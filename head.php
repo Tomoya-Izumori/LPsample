@@ -10,7 +10,7 @@
     <meta name="description" content="<?php echo $description; ?>">
     <!-- reset.css destyle -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?5">
 
     <!-- googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

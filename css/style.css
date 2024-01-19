@@ -114,14 +114,20 @@ p {
   background-color: #f0f0f0;
 }
 
-.c-page-title {
+.p-page .l-header--logo {
+  color: #333333 !important;
+}
+.p-page .l-header__nav__btn--bar {
+  background-color: #333333 !important;
+}
+.p-page-title {
   margin-bottom: 2.4rem;
 }
-.c-page-title h1 {
+.p-page-title h1 {
   font-size: 2.7rem;
   line-height: 1.56;
 }
-.c-page-title h1 span {
+.p-page-title h1 span {
   display: block;
   font-size: 1.4rem;
   font-weight: normal;
@@ -149,7 +155,8 @@ p {
   font-size: 2rem;
   font-weight: bold;
   line-height: 6rem;
-  color: #333333;
+  color: #ffffff;
+  transition: all 0.4s;
 }
 .l-header__nav__btn {
   display: none;
@@ -171,7 +178,7 @@ p {
 .l-header__nav__btn--bar {
   position: relative;
   height: 2px;
-  background-color: #333;
+  background-color: #ffffff;
   mix-blend-mode: difference;
   border-radius: 9999px;
   transition: all 0.4s;
@@ -232,6 +239,12 @@ p {
 .l-header__nav.open .l-header__nav__list {
   opacity: 80%;
   visibility: visible;
+}
+.l-header.black .l-header--logo {
+  color: #333333;
+}
+.l-header.black .l-header__nav__btn--bar {
+  background-color: #333333;
 }
 
 .p-mv01 .sticky-wrapper {
@@ -309,9 +322,12 @@ p {
 .p-news__item {
   display: block;
 }
-.p-news__img img {
+.p-news__img {
   aspect-ratio: 16/9;
-  max-width: 100%;
+}
+.p-news__img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .p-news__contents {
@@ -354,6 +370,11 @@ p {
   display: block;
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+.p-news-editor {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: solid 1px #000000;
 }
 .p-news-editor > * + * {
   margin-top: 6rem;
@@ -542,6 +563,12 @@ p {
     background-color: #ffffff;
   }
 }
+.p-news__back a {
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: underline;
+}
 
 .p-about--img {
   width: 100%;
@@ -572,6 +599,7 @@ p {
 .p-service__list__item--img {
   width: 100%;
   aspect-ratio: 16/10;
+  object-fit: cover;
   margin-top: 3rem;
   margin-bottom: 2rem;
   border-radius: 8%;

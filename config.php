@@ -9,11 +9,11 @@ if (isset($_SERVER['HTTPS']) AND $_SERVER['HTTPS'] == 'on') {
 	$protocol = 'https://'; 
 }else{
 	$protocol = 'http://'; 
-} 
-$homeUrl =  $protocol . $_SERVER['HTTP_HOST'] . '/LPsample';
+}
 
-$dir_path = __DIR__;
+$homeUrl =  $protocol . $_SERVER['HTTP_HOST'] . '/LPsample';
+$dir_path = '/LPsample';
 
 // wp rest api
 $wpDir = '/wp'; // wordpressをインストールしているディレクトリを指定してください。
-$apiUrl = $homeUrl . $wpDir . '/wp-json/wp/v2/'; // {post_id}を記事のIDに置き換えてください。
+$apiUrl = $homeUrl . $wpDir . '/wp-json/wp/v2/';

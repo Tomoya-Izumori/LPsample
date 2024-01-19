@@ -15,11 +15,15 @@ include 'head.php'; // head.php の読み込み
     <?php include 'template/mv01.php'; ?>
     <?php include 'template/mv02.php'; ?>
     <?php include 'template/about.php'; ?>
+
+    <?php // ↓ ロゴカラーチェンジ ポイント ?>
+    <span id="js-copy-change-point"></span>
+
     <?php include 'template/service.php'; ?>
     <?php include 'template/recruit.php'; ?>
     <?php include 'template/sns.php'; ?>
     <?php include 'template/top-news.php'; ?>
-    <?php include 'template/faq.php'; ?>
+    <?php // include 'template/faq.php'; ?>
     <?php include 'template/contact.php'; ?>
     <?php include 'template/footer.php'; ?>
 
