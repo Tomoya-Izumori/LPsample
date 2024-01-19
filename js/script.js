@@ -1,4 +1,5 @@
 var width = $(window).width();
+
 $(function () {
   function sliderSetting() {
     var width = $(window).width();
@@ -21,6 +22,7 @@ $(function () {
     sliderSetting();
   });
 });
+
 
 const stickyItem = document.querySelectorAll('.sticky');
 Stickyfill.add(stickyItem);

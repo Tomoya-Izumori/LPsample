@@ -1,8 +1,10 @@
 <?php
+include 'config.php';
+
 $title = 'Sample LP';
 $description = 'スライド型LPのサンプルサイトです。';
 $is_home = true; //トップページの判定用の変数
-$dir_path = __DIR__;
+
 include 'head.php'; // head.php の読み込み
 ?>
 <!-- 特定のページでのみ読み込むスタイルシートなどがあればここに追加 -->

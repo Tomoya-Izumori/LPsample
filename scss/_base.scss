@@ -6,7 +6,7 @@ $base-color: #fff;
 //font
 
 .f-serif {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
 }
 
 .f-sans {
@@ -14,7 +14,7 @@ $base-color: #fff;
 }
 
 .f-pop {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -31,14 +31,6 @@ html {
   }
 }
 
-section {
-  height: 180vh;
-  display: block;
-  background-color: #f0f0f0;
-  position: sticky;
-  top: 0;
-}
-
 h1 {
   @include sp {
     font-size: 3.6rem;
@@ -51,16 +43,12 @@ h2 {
   font-size: 2.4rem;
 }
 
-h3 {}
+h3 {
+}
 
 p {
   font-size: 1.6rem;
   line-height: 3.2rem;
-}
-
-.container {
-  width: 87.5%;
-  margin: 0 auto;
 }
 
 .sticky-wrapper {
@@ -72,6 +60,14 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 0 1rem;
+}
+
+.sticky {
+  height: 180vh;
+  display: block;
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
 }
 
 .bg-light {
@@ -92,9 +88,49 @@ p {
 
     &--ja {
       display: block;
-      font-size: 2rem;
-      font-weight: bold;
+      font-size: 1.3rem;
+      font-weight: normal;
+      margin-top: 0.5rem;
       text-align: center;
     }
+  }
+}
+
+.section__contents {
+}
+
+.l-container {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.l-contents {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: #f0f0f0;
+}
+
+.c-page {
+  &-title {
+    margin-bottom: 2.4rem;
+    h1 {
+      font-size: 2.7rem;
+      line-height: 1.56;
+      span {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.c-link {
+  font-size: 1.3rem;
+  padding-top: 3rem;
+  text-decoration: underline;
+  &.-center {
+    display: block;
+    text-align: center;
   }
 }

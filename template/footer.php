@@ -1,5 +1,5 @@
 <footer class="l-footer">
-    <div class="container">
+    <div class="l-container">
         <p><small>&copy;Copyright</small></p>
     </div>
 </footer>

@@ -1,6 +1,6 @@
 <header class="l-header">
-    <div class="container">
-        <a href="#" class="l-header--logo">GITEC GLOBAL TEAM</a>
+    <div class="l-container">
+        <a href="<?php echo $homeUrl; ?>" class="l-header--logo">GITEC GLOBAL TEAM</a>
         <div id="js-open-btn" class="l-header__nav__btn">
             <span class="l-header__nav__btn--bar"></span>
             <span class="l-header__nav__btn--bar"></span>
