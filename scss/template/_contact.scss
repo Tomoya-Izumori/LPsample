@@ -1,10 +1,13 @@
 .p-contact {
+
+  height: 105vh;
+
   &__content {
     &__form {
       width: 100%;
       height: auto;
       border: 1px solid #dedede;
-      padding: 4rem 4rem;
+      padding: 2rem 2rem;
       background: #ffffff;
 
       &__row {

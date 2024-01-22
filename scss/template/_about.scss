@@ -34,9 +34,27 @@
     font-size: 1.7rem;
     font-weight: 700;
     padding: 2.4rem;
-    color: #6e6e73;
-    strong {
-      color: rgb(29, 29, 31);
+    color: rgb(29, 29, 31);
+
+    &.js-typing {
+      span {
+        display: none;
+      }
+
+      /*文字列後ろの線の設定*/
+      &::after {
+        content: "|";
+        animation: typinganime 0.8s ease infinite;
+      }
     }
+  }
+}
+
+@keyframes typinganime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

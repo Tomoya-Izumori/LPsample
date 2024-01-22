@@ -2,9 +2,15 @@
 
 .p-news {
   $this: &;
+
+  height: 215vh;
   &__slider {
     padding-left: 1rem;
     padding-right: 1rem;
+    .slick-slide {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
     .slick-dots {
       bottom: -3rem;
       left: 0;
@@ -23,6 +29,7 @@
     display: block;
     height: 100%;
     padding: 1.6rem;
+    border-radius: 1.6rem;
     background: #ffffff;
   }
   &__img {
