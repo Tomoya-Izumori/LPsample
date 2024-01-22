@@ -316,6 +316,10 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.p-news__slider .slick-dots {
+  bottom: -3rem;
+  left: 0;
+}
 .p-news__wrap .p-news__item + .p-news__item {
   margin-top: 4rem;
 }

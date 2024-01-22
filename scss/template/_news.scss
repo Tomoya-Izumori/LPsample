@@ -5,6 +5,10 @@
   &__slider {
     padding-left: 1rem;
     padding-right: 1rem;
+    .slick-dots {
+      bottom: -3rem;
+      left: 0;
+    }
   }
   &__wrap {
     #{$this}__item {
