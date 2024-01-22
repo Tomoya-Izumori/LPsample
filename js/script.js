@@ -35,6 +35,7 @@ $(function () {
           '<span class="slide-arrow next-arrow"></span>',
         variableWidth: false,
         adaptiveHeight: false,
+        slidesToShow: 1,
       });
     } else {
       $(".slide.slick-initialized").slick("unslick");

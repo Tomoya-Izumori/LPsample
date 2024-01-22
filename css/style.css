@@ -934,6 +934,84 @@ p {
   font-size: 1.2rem;
 }
 
+.p-flow .section__header {
+  margin-top: 4rem;
+}
+.p-flow__slider.slick-slider .slick-list {
+  padding-right: 10rem !important;
+}
+.p-flow--item {
+  position: relative;
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 26rem !important;
+  height: 40rem;
+  padding: 2.4rem 1.6rem;
+  border-radius: 1.6rem;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+}
+.p-flow--item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.p-flow--title {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 1;
+}
+.p-flow--title span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.p-flow--contents {
+  position: relative;
+  color: #ffffff;
+  z-index: 1;
+}
+.p-flow--contents p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+.p-flow--contents a {
+  position: relative;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-top: 2rem;
+  padding: 1rem 3rem 1rem 2rem;
+  border-radius: 100rem;
+  color: #333333;
+  background: #ffffff;
+}
+.p-flow--contents a::before, .p-flow--contents a::after {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  bottom: 0;
+  right: 1.25rem;
+  width: 1.2rem;
+  height: 2px;
+  margin: auto;
+  background: #333333;
+}
+.p-flow--contents a::after {
+  transform: rotate(90deg);
+}
+
 .p-contact {
   height: 105vh;
 }
