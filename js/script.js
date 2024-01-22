@@ -25,10 +25,14 @@ $(function () {
     var width = $(window).width();
     if (width <= 768) {
       $(".slide").not(".slick-initialized").slick({
-        autoplay: true,
+        // autoplay: true,
         autoplayspeed: 6000,
         dots: true,
-        arrows: false,
+        arrows: true,
+        prevArrow:
+          '<span class="slide-arrow prev-arrow"></span>',
+        nextArrow:
+          '<span class="slide-arrow next-arrow"></span>',
         variableWidth: false,
         adaptiveHeight: false,
       });

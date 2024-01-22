@@ -1,8 +1,6 @@
-.p-service {
+.p-member {
   &__list {
-
     &.slick-slider {
-      margin-top: 3rem;
     }
 
     &__item {
@@ -29,26 +27,24 @@
         width: 100%;
         aspect-ratio: 16/10;
         object-fit: cover;
-        margin-top: 1.6rem;
         margin-bottom: 1rem;
       }
 
-      &--desc {
+      &--name {
         font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        line-height: 1.56;
+      }
+
+      &--position {
+        font-size: 1.3rem;
         margin-bottom: 1rem;
         line-height: 1.56;
       }
 
-      &--info {
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #6e6e73;
-      }
-
       &--skill {
         display: block;
-        margin-bottom: 1rem;
         line-height: 1.56;
         span {
           display: inline-block;

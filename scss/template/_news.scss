@@ -21,6 +21,9 @@
   }
   &__item {
     display: block;
+    height: 100%;
+    padding: 1.6rem;
+    background: #ffffff;
   }
   &__img {
     aspect-ratio: 16/9;

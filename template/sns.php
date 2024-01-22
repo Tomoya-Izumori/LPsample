@@ -5,8 +5,10 @@
       <span class="section__header--h2--ja">instagram</span>
     </div>
     <div class="section__contents">
-      <div class="p-sns">
-        
+      <div class="p-sns__wrap">
+        <div class="p-sns__item">
+          <a href="#"><img src="" alt=""></a>
+        </div>
       </div>
     </div>
   </div>

@@ -29,8 +29,8 @@ $BREAKPOINT_SP: 768px;
 
 /* mixin font*/
 
-@mixin f-pop {
-  font-family: 'Poppins', sans-serif;
+@mixin f-outfit {
+  font-family: "Outfit", sans-serif;
 }
 
 @mixin f-sans {
@@ -38,11 +38,10 @@ $BREAKPOINT_SP: 768px;
 }
 
 @mixin f-serif {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
 }
 
 /* mixin display-none*/
-
 
 .sp-none {
   @include sp {
@@ -65,14 +64,10 @@ $BREAKPOINT_SP: 768px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  @else if $direction==x {
+  } @else if $direction==x {
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  @else if $direction==y {
+  } @else if $direction==y {
     top: 50%;
     transform: translateY(-50%);
   }

@@ -12,18 +12,136 @@ include 'head.php'; // head.php の読み込み
 
 <body>
     <?php include 'template/header.php'; ?>
-    <?php include 'template/mv01.php'; ?>
-    <?php include 'template/mv02.php'; ?>
-    <?php include 'template/about.php'; ?>
 
-    <?php // ↓ ロゴカラーチェンジ ポイント ?>
+    <?php include 'template/mv01.php'; ?>
+
+    <?php
+    // about01
+    $about_title = 'スピーディーに開発';
+    $about_img = $dir_path . '/img/img-about.jpg';
+    $about_lead = '私たちは、国内パートナー企業と連携し、<br><strong>ベトナム・ネパールに開発拠点</strong>を構え、<br><strong>スピーディーかつコストダウンが可能</strong>な<br>グローバル開発チームを構築しています。';
+    include 'template/about.php';
+    ?>
+
+
+    <?php
+    // about02
+    $about_title = 'PMは日本スタッフが対応';
+    $about_img = $dir_path . '/img/img-about.jpg';
+    $about_lead = '<strong>日本語でのコミュニケーション</strong>と<br>ジャパンクオリティーを担保。<br>プロジェクトは全て<strong>日本国内スタッフ</strong>が担当。エンジニアも日本企業勤務経験が豊富な人材が揃っています。';
+    include 'template/about.php';
+    ?>
+
+    <?php include 'template/menu.php'; ?>
+
+
+    <?php // ↓ ロゴカラーチェンジ ポイント 
+    ?>
     <span id="js-copy-change-point"></span>
 
-    <?php include 'template/service.php'; ?>
-    <?php include 'template/recruit.php'; ?>
-    <?php include 'template/sns.php'; ?>
+    <?php include 'template/flow.php'; ?>
+
+    <?php include 'template/cost.php'; ?>
+
+    <?php
+
+    $services = array(
+        // 掲載するサービス配列
+        array(
+            'img' => 'http://localhost:8888/LPsample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
+            'title' => '実績管理システム',
+            'disc' => '従来のシステムの課題であったセキュリティ・管理性・操作性を向上させるため、新規の実績管理システム開発を提案・開発。',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin'),
+            'info' => '9人月 - 3ヶ月',
+        ),
+        array(
+            'img' => 'http://localhost:8888/LPsample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
+            'title' => '実績管理システム',
+            'disc' => '従来のシステムの課題であったセキュリティ・管理性・操作性を向上させるため、新規の実績管理システム開発を提案・開発。',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin'),
+            'info' => '9人月 - 3ヶ月',
+        ),
+        array(
+            'img' => 'http://localhost:8888/LPsample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
+            'title' => '実績管理システム',
+            'disc' => '従来のシステムの課題であったセキュリティ・管理性・操作性を向上させるため、新規の実績管理システム開発を提案・開発。',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin'),
+            'info' => '9人月 - 3ヶ月',
+        )
+    );
+
+    include 'template/service.php';
+
+    ?>
+
+    <?php
+
+    $sectionTitle = 'JAPAN TEAM';
+    $members = array(
+        // 掲載するメンバー配列
+        array(
+            'img' => $about_img = $dir_path . '/img/img-about.jpg',
+            'name' => 'Iwasawa Kennosuke',
+            'position' => 'Engineer',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin')
+        ),
+        array(
+            'img' => $about_img = $dir_path . '/img/img-about.jpg',
+            'name' => 'Iwasawa Kennosuke',
+            'position' => 'Engineer',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin')
+        ),
+        array(
+            'img' => $about_img = $dir_path . '/img/img-about.jpg',
+            'name' => 'Iwasawa Kennosuke',
+            'position' => 'Engineer',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin')
+        )
+    );
+
+    include 'template/member.php';
+
+    ?>
+
+    <?php
+
+    $sectionTitle = 'GLOBAL TEAM';
+    $members = array(
+        // 掲載するメンバー配列
+        array(
+            'img' => $about_img = $dir_path . '/img/img-about.jpg',
+            'name' => 'Iwasawa Kennosuke',
+            'position' => 'Engineer',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin')
+        ),
+        array(
+            'img' => $about_img = $dir_path . '/img/img-about.jpg',
+            'name' => 'Iwasawa Kennosuke',
+            'position' => 'Engineer',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin')
+        ),
+        array(
+            'img' => $about_img = $dir_path . '/img/img-about.jpg',
+            'name' => 'Iwasawa Kennosuke',
+            'position' => 'Engineer',
+            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin')
+        )
+    );
+
+    include 'template/member.php';
+
+    ?>
+
+    <?php // include 'template/recruit.php'; 
+    ?>
+    <?php // include 'template/sns.php'; 
+    ?>
+
     <?php include 'template/top-news.php'; ?>
-    <?php // include 'template/faq.php'; ?>
+
+    <?php // include 'template/faq.php'; 
+    ?>
+
     <?php include 'template/contact.php'; ?>
     <?php include 'template/footer.php'; ?>
 
