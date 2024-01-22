@@ -8,6 +8,46 @@
         padding-right: 10rem !important;
       }
     }
+    .slick-dots {
+      li {
+        width: auto;
+        height: auto;
+        button {
+          display: block;
+          font-size: 1.4rem;
+          font-weight: 700;
+          width: auto;
+          height: auto;
+          padding: 0;
+          line-height: unset;
+          color: #333333;
+          opacity: 0.25;
+          transition: all 0.4s;
+          &::before {
+            font-family: initial;
+            content: "0";
+            position: relative;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: unset;
+            opacity: 1 !important;
+            -webkit-font-smoothing: unset;
+            -moz-osx-font-smoothing: unset;
+            transition: all 0.4s;
+          }
+        }
+
+        &.slick-active {
+          button {
+            font-size: 1.8rem;
+            opacity: 1;
+            &::before {
+                font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
   }
   &--item {
     position: relative;
@@ -81,6 +121,12 @@
       &::after {
         transform: rotate(90deg);
       }
+    }
+  }
+
+  &--modal {
+    &-inner {
+        
     }
   }
 }

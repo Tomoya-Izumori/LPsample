@@ -19,14 +19,43 @@ $(function () {
   }
 });
 
-// slider
+// slider generic
 $(function () {
   function sliderSetting() {
     var width = $(window).width();
     if (width <= 768) {
       $(".slide").not(".slick-initialized").slick({
-        // autoplay: true,
+        autoplay: true,
         autoplayspeed: 6000,
+        dots: true,
+        arrows: true,
+        prevArrow:
+          '<span class="slide-arrow prev-arrow"></span>',
+        nextArrow:
+          '<span class="slide-arrow next-arrow"></span>',
+        variableWidth: false,
+        adaptiveHeight: false,
+        slidesToShow: 1,
+      });
+    } else {
+      $(".slide.slick-initialized").slick("unslick");
+    }
+  }
+  sliderSetting();
+
+  $(window).resize(function () {
+    sliderSetting();
+  });
+});
+
+// slider flow
+$(function () {
+  function sliderSetting() {
+    var width = $(window).width();
+    if (width <= 768) {
+      $(".slide-flow").not(".slick-initialized").slick({
+        autoplayspeed: 6000,
+        infinite: false,
         dots: true,
         arrows: true,
         prevArrow:
@@ -88,7 +117,6 @@ function TextTypingAnime() {
 $(window).scroll(function () {
   TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
 });// ここまで画面をスクロールをしたら動かしたい場合の記述
-
 // 画面が読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load', function () {
   //spanタグを追加する
@@ -109,3 +137,28 @@ $(window).on('load', function () {
 
   TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+
+// modal
+$(function () {
+  const modalBtn = $(".js-open-modal");
+  const modal = $(".c-modal");
+
+  function closeModal() {
+    modal.addClass("modal-close");
+    setTimeout(function () {
+        modal.hide();
+    }, 400);
+  }
+
+  $(modalBtn).each(function () {
+    $(this).on("click", function () {
+        modal.removeClass("modal-close");
+        modal.css("display","flex");
+    });
+  });
+
+  $(document).on("click", ".js-modal-close", function () {
+    closeModal();
+  });
+});

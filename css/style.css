@@ -940,6 +940,41 @@ p {
 .p-flow__slider.slick-slider .slick-list {
   padding-right: 10rem !important;
 }
+.p-flow__slider .slick-dots li {
+  width: auto;
+  height: auto;
+}
+.p-flow__slider .slick-dots li button {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: auto;
+  height: auto;
+  padding: 0;
+  line-height: unset;
+  color: #333333;
+  opacity: 0.25;
+  transition: all 0.4s;
+}
+.p-flow__slider .slick-dots li button::before {
+  font-family: initial;
+  content: "0";
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: unset;
+  opacity: 1 !important;
+  -webkit-font-smoothing: unset;
+  -moz-osx-font-smoothing: unset;
+  transition: all 0.4s;
+}
+.p-flow__slider .slick-dots li.slick-active button {
+  font-size: 1.8rem;
+  opacity: 1;
+}
+.p-flow__slider .slick-dots li.slick-active button::before {
+  font-size: 1.7rem;
+}
 .p-flow--item {
   position: relative;
   display: flex !important;
@@ -1011,7 +1046,6 @@ p {
 .p-flow--contents a::after {
   transform: rotate(90deg);
 }
-
 .p-contact {
   height: 105vh;
 }
@@ -1094,6 +1128,97 @@ p {
   font-family: "Noto Serif JP", serif;
   font-weight: bold;
   border-radius: 0.5rem;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modal-inner {
+  from {
+    transform: translate(0, 5rem);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+.c-modal {
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  opacity: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-name: modal;
+  transition: opacity 0.3s ease-out;
+}
+.c-modal__inner {
+  position: relative;
+  width: 80.2rem;
+  padding: 6.4rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-name: modal-inner;
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-out;
+}
+.c-modal__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.67);
+}
+.c-modal__close-btn {
+  position: absolute;
+  top: 2.4rem;
+  right: 4rem;
+  font-size: 1.4rem;
+  padding-right: 1.5rem;
+  color: #353535;
+}
+.c-modal__close-btn::before, .c-modal__close-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1.3rem;
+  height: 1px;
+  margin: auto;
+  border-radius: 1.3rem;
+  background-color: #707070;
+  transform: rotate(45deg);
+}
+.c-modal__close-btn::after {
+  transform: rotate(-45deg);
+}
+.c-modal.modal-close {
+  opacity: 0;
+}
+.c-modal.modal-close .c-modal__inner {
+  transform: translate(0, 5rem);
+}
+.c-modal.-mypage {
+  display: none;
+  margin-top: 0;
+}
+.c-modal.-mypage .c-modal__inner {
+  width: 110rem;
 }
 
 .l-footer {
