@@ -16,7 +16,9 @@
               echo '<span>' . $skill . '</span>';
             } ?>
           </span>
-          <span class="p-service__list__item--info"><?php echo $service['info']; ?></span>
+          <?php if(isset($service['info'])): ?>
+            <span class="p-service__list__item--info"><?php echo $service['info']; ?></span>
+          <?php endif; ?>
         </li>
 
       <?php

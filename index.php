@@ -19,7 +19,7 @@ include 'head.php'; // head.php の読み込み
     // about01
     $about_title = 'スピーディーに開発';
     $about_img = $dir_path . '/img/img-about.jpg';
-    $about_lead = '私たちは、国内パートナー企業と連携し、ベトナム・ネパールに開発拠点を構え、スピーディーかつコストダウンが可能なグローバル開発チームを構築しています。';
+    $about_lead = '世界中のエンジニア / 日本中のパートナーと共にグローバルチームを構成。スピーディーかつ低コストでweb開発が可能。';
     include 'template/about.php';
     ?>
 
@@ -28,7 +28,7 @@ include 'head.php'; // head.php の読み込み
     // about02
     $about_title = 'PMは日本スタッフが対応';
     $about_img = $dir_path . '/img/img-about.jpg';
-    $about_lead = '日本語でのコミュニケーションとジャパンクオリティーを担保。プロジェクトは全て日本国内スタッフが担当。エンジニアも日本企業勤務経験が豊富な人材が揃っています。';
+    $about_lead = '日本人または日本語が堪能なPMがプロジェクトをリードするため、オフショア開発特有のコミュニケーションの問題は一切なし。';
     include 'template/about.php';
     ?>
 
@@ -50,23 +50,30 @@ include 'head.php'; // head.php の読み込み
         array(
             'img' => 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
             'title' => '実績管理システム',
-            'disc' => '従来のシステムの課題であったセキュリティ・管理性・操作性を向上させるため、新規の実績管理システム開発を提案・開発。',
-            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin'),
-            'info' => '9人月 - 3ヶ月',
+            'disc' => '操作性・管理性に課題のあった従来のシステムを最新の技術を用いたシステムへリプレース。従来の操作感を残しつつ開発することで、導入ハードルも抑えながら運用可能となった。',
+            'skill' => array('PHP', 'Laravel', 'Vue.js', 'MySQL', 'AWS'),
+            // 'info' => '9人月 - 3ヶ月',
         ),
         array(
             'img' => 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
-            'title' => '実績管理システム',
-            'disc' => '従来のシステムの課題であったセキュリティ・管理性・操作性を向上させるため、新規の実績管理システム開発を提案・開発。',
-            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin'),
-            'info' => '9人月 - 3ヶ月',
+            'title' => 'EC構築 / 注文・配送管理システム',
+            'disc' => '集荷・配送どちらも必要な EC事業の展開に際し、ヤマト運輸と連携したシステムを開発。UI / UX に着目し、最低限の操作で注文が完了するよう開発。',
+            'skill' => array('PHP','React','Laravel','PostgreSQL','SakuraVPS','Yamato Developers','Stripe（決済）'),
+            // 'info' => '9人月 - 3ヶ月',
         ),
         array(
             'img' => 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
-            'title' => '実績管理システム',
-            'disc' => '従来のシステムの課題であったセキュリティ・管理性・操作性を向上させるため、新規の実績管理システム開発を提案・開発。',
-            'skill' => array('VB.NET', 'C#', 'H', 'php', 'Java', 'JavaScript', 'Python', 'Kotlin'),
-            'info' => '9人月 - 3ヶ月',
+            'title' => '施設予約システム',
+            'disc' => '娯楽施設開業に伴い、施設専用予約システムを開発。スマホユーザーに最適化されたUI設計と、マーケティング分析のための管理画面を実装した。',
+            'skill' => array('TypeScript','React','Nuxt','nest','MySQL','AWS'),
+            // 'info' => '9人月 - 3ヶ月',
+        ),
+        array(
+            'img' => 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
+            'title' => '予約LINEミニアプリ開発',
+            'disc' => 'LINE公式アカウントと組み合わせて利用可能なLINEミニアプリの開発。ユーザーの属性によってメッセージの配信先がコントロール可能なセグメント機能により、LINE公式アカウント運用のサポートが可能。',
+            'skill' => array('LIFF','LINE Messaging API','Next','AWS'),
+            // 'info' => '9人月 - 3ヶ月',
         )
     );
 
