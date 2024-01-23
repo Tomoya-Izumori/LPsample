@@ -139,26 +139,20 @@ $(window).on('load', function () {
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
-// modal
+// switch tab
 $(function () {
-  const modalBtn = $(".js-open-modal");
-  const modal = $(".c-modal");
+  var tabSwitchBtn = $(".js-tab-switch-btn");
+  var tabContents = $(".js-tab-contents");
 
-  function closeModal() {
-    modal.addClass("modal-close");
-    setTimeout(function () {
-        modal.hide();
-    }, 400);
-  }
+  tabSwitchBtn.click(function () {
+    var target = $(this).data("target");
+    tabSwitchBtn.removeClass("-active");
+    tabSwitchBtn.filter('[data-target="' + target + '"]').addClass("-active");
+    tabContents.removeClass("-active");
+    tabContents.filter('[data-target="' + target + '"]').addClass("-active");
 
-  $(modalBtn).each(function () {
-    $(this).on("click", function () {
-        modal.removeClass("modal-close");
-        modal.css("display","flex");
-    });
-  });
-
-  $(document).on("click", ".js-modal-close", function () {
-    closeModal();
+    var currentUrl = new URL(window.location);
+    currentUrl.searchParams.set("tab", target);
+    history.pushState({}, "", currentUrl);
   });
 });
