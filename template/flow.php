@@ -1,4 +1,4 @@
-<section class="p-flow sticky">
+<section id="flow" class="p-flow sticky">
   <div class="sticky-wrapper">
     <div class="section__header">
       <h2 class="section__header--h2 f-outfit">PROFECT FLOW</h2>

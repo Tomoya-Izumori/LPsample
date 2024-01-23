@@ -19,6 +19,39 @@ $(function () {
   }
 });
 
+// on mask
+$(function () {
+  var scroll;
+  const changeEle = $(".js-on-mask");
+  const changeElePoint = changeEle.offset().top;
+  $(window).on("scroll", function () {
+    scroll = $(window).scrollTop();
+    if (scroll >= changeElePoint) {
+      changeEle.addClass("on-mask");
+    } else {
+
+    }
+  });
+});
+
+// anchor-link
+$(function () {
+  $('a.js-anchor-link[href^="#"]').click(function () {
+    var adjust;
+    if ($(window).width() <= 768) {
+      adjust = 0;
+    } else {
+      adjust = 40;
+    }
+    var speed = 400;
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? "html" : href);
+    var position = target.offset().top - adjust;
+    $("body,html").animate({ scrollTop: position }, speed, "swing");
+    return false;
+  });
+});
+
 // slider generic
 $(function () {
   function sliderSetting() {
@@ -29,10 +62,8 @@ $(function () {
         autoplayspeed: 6000,
         dots: true,
         arrows: true,
-        prevArrow:
-          '<span class="slide-arrow prev-arrow"></span>',
-        nextArrow:
-          '<span class="slide-arrow next-arrow"></span>',
+        prevArrow: '<span class="slide-arrow prev-arrow"></span>',
+        nextArrow: '<span class="slide-arrow next-arrow"></span>',
         variableWidth: false,
         adaptiveHeight: false,
         slidesToShow: 1,
@@ -58,10 +89,8 @@ $(function () {
         infinite: false,
         dots: true,
         arrows: true,
-        prevArrow:
-          '<span class="slide-arrow prev-arrow"></span>',
-        nextArrow:
-          '<span class="slide-arrow next-arrow"></span>',
+        prevArrow: '<span class="slide-arrow prev-arrow"></span>',
+        nextArrow: '<span class="slide-arrow next-arrow"></span>',
         variableWidth: false,
         adaptiveHeight: false,
         slidesToShow: 1,
@@ -91,7 +120,7 @@ $(function () {
 
 // Typing animation
 function TextTypingAnime() {
-  $('.js-typing').each(function () {
+  $(".js-typing").each(function () {
     var elemPos = $(this).offset().top - 50;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
@@ -102,7 +131,9 @@ function TextTypingAnime() {
       thisChild.each(function (i) {
         var time = 62;
         //時差で表示する為にdelayを指定しその時間後にfadeInで表示させる
-        $(this).delay(time * i).fadeIn(time);
+        $(this)
+          .delay(time * i)
+          .fadeIn(time);
       });
     } else {
       thisChild = $(this).children();
@@ -113,31 +144,27 @@ function TextTypingAnime() {
     }
   });
 }
-// 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-  TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
-});// ここまで画面をスクロールをしたら動かしたい場合の記述
-// 画面が読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
+  TextTypingAnime(); /* アニメーション用の関数を呼ぶ*/
+});
+$(window).on("load", function () {
   //spanタグを追加する
   var element = $(".js-typing");
   element.each(function () {
     var text = $(this).html();
     var textbox = "";
-    text.split('').forEach(function (t) {
+    text.split("").forEach(function (t) {
       if (t !== " ") {
-        textbox += '<span>' + t + '</span>';
+        textbox += "<span>" + t + "</span>";
       } else {
         textbox += t;
       }
     });
     $(this).html(textbox);
-
   });
 
-  TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
-});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-
+  TextTypingAnime(); /* アニメーション用の関数を呼ぶ*/
+});
 
 // switch tab
 $(function () {

@@ -1,4 +1,4 @@
-<section class="p-member sticky">
+<section id="<?php echo $sectionId; ?>" class="p-member sticky">
     <div class="sticky-wrapper">
         <div class="section__header">
             <h2 class="section__header--h2 f-outfit"><?php echo $sectionTitle; ?></h2>

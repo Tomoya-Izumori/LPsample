@@ -1,4 +1,4 @@
-<section class="p-cost sticky">
+<section id="cost" class="p-cost sticky">
     <div class="sticky-wrapper">
         <div class="section__header">
             <h2 class="section__header--h2 f-outfit">PROFECT COST</h2>

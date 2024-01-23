@@ -1,4 +1,4 @@
-<section class="p-service sticky">
+<section id="service" class="p-service sticky">
   <div class="sticky-wrapper">
     <ul class="p-service__list slide">
 

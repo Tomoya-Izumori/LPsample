@@ -1,4 +1,4 @@
-<section class="p-contact sticky">
+<section id="contact" class="p-contact sticky">
   <div class="sticky-wrapper">
 
     <div class="section__header">

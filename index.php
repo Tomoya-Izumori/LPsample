@@ -16,12 +16,20 @@ include 'head.php'; // head.php の読み込み
     <?php include 'template/mv01.php'; ?>
 
     <?php
+    // intro
+
+    $intro_title = 'GITEC GLOBAL LABO<br>について';
+    $intro_desc = '国内企業4社が提携し、ベトナムに開発拠点を構えたグローバル開発チームです。';
+    $intro_bg = 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg';
+
+    include 'template/intro.php'; ?>
+
+    <?php
     // about01
     $about_title = 'スピーディーに開発';
     $about_img = $dir_path . '/img/img-about.jpg';
     $about_lead = '世界中のエンジニア / 日本中のパートナーと共にグローバルチームを構成。スピーディーかつ低コストでweb開発が可能。';
-    include 'template/about.php';
-    ?>
+    include 'template/about.php'; ?>
 
 
     <?php
@@ -29,8 +37,7 @@ include 'head.php'; // head.php の読み込み
     $about_title = 'PMは日本スタッフが対応';
     $about_img = $dir_path . '/img/img-about.jpg';
     $about_lead = '日本人または日本語が堪能なPMがプロジェクトをリードするため、オフショア開発特有のコミュニケーションの問題は一切なし。';
-    include 'template/about.php';
-    ?>
+    include 'template/about.php'; ?>
 
     <?php include 'template/menu.php'; ?>
 
@@ -83,6 +90,7 @@ include 'head.php'; // head.php の読み込み
 
     <?php
 
+    $sectionId = 'japan-team';
     $sectionTitle = 'JAPAN TEAM';
     $members = array(
         // 掲載するメンバー配列
@@ -112,6 +120,7 @@ include 'head.php'; // head.php の読み込み
 
     <?php
 
+    $sectionId = 'global-team';
     $sectionTitle = 'GLOBAL TEAM';
     $members = array(
         // 掲載するメンバー配列

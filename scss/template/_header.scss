@@ -79,8 +79,7 @@
         align-items: center;
         width: 100%;
         height: 100vh;
-        background-color: #0a0a0a;
-        opacity: 80%;
+        background-color: rgb(10 10 10 / 72%);
         position: fixed;
         top: 0;
         right: 0;
@@ -104,12 +103,16 @@
           margin-left: 0;
           margin-bottom: 3rem;
         }
+
+        a {
+          color: #ffffff;
+        }
       }
     }
 
     &.open {
       .l-header__nav__list {
-        opacity: 80%;
+        opacity: 1;
         visibility: visible;
       }
     }
