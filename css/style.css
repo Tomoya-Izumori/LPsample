@@ -367,17 +367,25 @@ p {
   background-color: #333333;
 }
 .p-cost--contents {
-  display: none;
-  width: calc(100% - 6rem);
-  min-height: 40rem;
+  width: calc(100% - 4rem);
   margin-left: auto;
   margin-right: auto;
-  padding: 1.6rem;
-  border-radius: 1rem;
+  padding: 0 1.6rem 1.6rem;
+  border-radius: 0 0 1rem 1rem;
   background: #ffffff;
 }
 .p-cost--contents.-active {
   display: block;
+}
+.p-cost--title {
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 -1.6rem 1.6rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #333333;
 }
 .p-cost--info h4 {
   font-size: 1.5rem;
@@ -392,6 +400,7 @@ p {
 .p-cost--info strong {
   display: block;
   font-size: 1.8rem;
+  font-weight: 900;
   margin: 1rem 0 2rem;
   line-height: 1.56;
 }
@@ -493,6 +502,18 @@ p {
   border-radius: 1.6rem;
   background-color: rgba(0, 0, 0, 0.36);
 }
+.p-flow--item.-cost {
+  padding: 0;
+}
+.p-flow--item.-cost::after {
+  content: none;
+}
+.p-flow--item.-cost .p-cost--contents {
+  width: 100%;
+}
+.p-flow--item.-cost .p-cost--title {
+  border-radius: 1.6rem 1.6rem 0 0;
+}
 .p-flow--item {
   position: relative;
   display: flex !important;
@@ -515,6 +536,23 @@ p {
   height: 100%;
   border-radius: 1.6rem;
   background-color: rgba(0, 0, 0, 0.36);
+}
+.p-flow--type {
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  margin-left: 0.55rem;
+  padding: 0.25rem 0 0.4rem 1.5rem;
+  line-height: 1;
+}
+.p-flow--type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 100%;
+  background-color: #333333;
 }
 .p-flow--title {
   position: relative;
@@ -1260,13 +1298,13 @@ p {
   text-decoration: underline;
 }
 
-.p-service__list {
+.p-result__list {
   margin-top: 3rem;
 }
-.p-service__list .swiper-slide {
+.p-result__list .swiper-slide {
   width: 100% !important;
 }
-.p-service__list__item {
+.p-result__list__item {
   position: relative;
   height: 100% !important;
   padding: 1.6rem;
@@ -1274,56 +1312,84 @@ p {
   border-radius: 1.6rem;
   background-color: #ffffff;
 }
-.p-service__list__item .section__header--h2 {
+.p-result__list__item .section__header--h2 {
   font-size: 2.4rem;
   font-weight: bold;
 }
-.p-service__list__item .section__header--h2--ja {
+.p-result__list__item .section__header--h2--ja {
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
   margin-top: 0.5rem;
   text-align: center;
 }
-.p-service__list__item--img {
+.p-result__list__item--img {
   width: 100%;
   aspect-ratio: 16/10;
   object-fit: cover;
   margin-top: 1.6rem;
   margin-bottom: 1rem;
 }
-.p-service__list__item--desc {
+.p-result__list__item--desc {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   line-height: 1.56;
 }
-.p-service__list__item--info {
+.p-result__list__item--info {
   display: block;
   font-size: 1.2rem;
   font-weight: 600;
   color: #6e6e73;
 }
-.p-service__list__item--skill {
+.p-result__list__item--skill {
   display: block;
   margin-bottom: 1rem;
   line-height: 1.56;
 }
-.p-service__list__item--skill span {
+.p-result__list__item--skill span {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 600;
   color: #6e6e73;
 }
-.p-service__list__item--skill span + span {
+.p-result__list__item--skill span + span {
   position: relative;
   margin-left: 0.5rem;
   padding-left: 1rem;
 }
-.p-service__list__item--skill span + span::before {
+.p-result__list__item--skill span + span::before {
   content: "/";
   position: absolute;
   left: 0;
   font-size: 1.2rem;
+}
+
+.p-service--text {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+  line-height: 1.56;
+}
+.p-service--list {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.p-service--item {
+  position: relative;
+  font-size: 2.7rem;
+  font-weight: 900;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.p-service--item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 6.4rem;
+  height: 0.4rem;
+  background-color: #333333;
 }
 
 /*# sourceMappingURL=style.css.map */

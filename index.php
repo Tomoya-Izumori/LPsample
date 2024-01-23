@@ -52,20 +52,94 @@ include 'head.php'; // head.php の読み込み
 
     include 'template/intro.php'; ?>
 
-    <?php include 'template/menu.php'; ?>
-
-
-    <?php // ↓ ロゴカラーチェンジ ポイント 
-    ?>
+    <?php // ↓ ロゴカラーチェンジ ポイント ?>
     <span id="js-copy-change-point"></span>
 
-    <?php include 'template/flow.php'; ?>
+    <?php include 'template/service.php'; ?>
 
-    <?php include 'template/cost.php'; ?>
+    <?php
+    
+    $type_title = '受託開発';
+
+    $cost_price = '1人月 60万円〜';
+    $cost_desc = 'システム開発請負契約にてご依頼の場合は、1人月60万円';
+    $cost_note = '*工数の金額となります。';
+    $cost_case = '例）プロジェクト工数：5人月<br>　　→ 60万円 * 5人月 = 300万円';
+    $cost_range = array('要件定義', '設計', '開発', 'テスト');
+
+    $flows = array(
+        // 掲載するフロー配列
+        array(
+            'img' => $dir_path . '/img/img-mv-1.jpg',
+            'read' => 'システムに課題を感じたら',
+            'title' => 'お問い合わせ・ヒヤリング',
+            'disc' => '打ち合わせには何も準備する必要はありません。弊社のスタッフが0からヒアリングいたします。',
+        ),
+        array(
+            'img' => $dir_path . '/img/img-about.jpg',
+            'read' => '最適なソリューションを',
+            'title' => '企画・提案',
+            'disc' => 'ヒアリングの内容を基に、開発の全体像・イメージをご提案いたします。数回にわたる企画・提案の中で、スケジュールや金額感についてもご説明いたします。',
+        ),
+        array(
+            'img' => 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
+            'read' => 'リード文：ダミーテキスト',
+            'title' => 'ご契約',
+            'disc' => '企画内容承認後、まずは設計段階で契約締結。設計終了後に開発段階の契約を行います。',
+        ),
+        array(
+            'img' => $dir_path . '/img/img-mv-1.jpg',
+            'read' => 'リード文：ダミーテキスト',
+            'title' => '開発開始',
+            'disc' => '開発開始です。定例会の設置により、進捗を確認することも可能です。納品に向け、責任を持って進めていきます。',
+        ),
+    );
+    
+    include 'template/flow.php'; ?>
+
+<?php
+    
+    $type_title = 'ラボ型開発';
+
+    $cost_price = 'PM 50万円<br>SENIOR 50万円<br>MIDDLE 40万円<br>JUNIOR 30万円';
+    $cost_desc = 'ご希望のスキルセットを持っているPM・エンジニアでチームを組み開発を進めることができます。';
+    $cost_note = '';
+    $cost_case = '例）PM1名 SENIOR1名 MIDDLE1名<br>　　→ 140万円(月)';
+    $cost_range = array('開発', 'テスト');
+
+    $flows = array(
+        // 掲載するフロー配列
+        array(
+            'img' => $dir_path . '/img/img-mv-1.jpg',
+            'read' => 'システムに課題を感じたら',
+            'title' => 'お問い合わせ・ヒヤリング',
+            'disc' => '打ち合わせには何も準備する必要はありません。弊社のスタッフが0からヒアリングいたします。',
+        ),
+        array(
+            'img' => $dir_path . '/img/img-about.jpg',
+            'read' => '最適なソリューションを',
+            'title' => '企画・提案',
+            'disc' => 'ヒアリングの内容を基に、開発の全体像・イメージをご提案いたします。数回にわたる企画・提案の中で、スケジュールや金額感についてもご説明いたします。',
+        ),
+        array(
+            'img' => 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
+            'read' => 'リード文：ダミーテキスト',
+            'title' => 'ご契約',
+            'disc' => '企画内容承認後、まずは設計段階で契約締結。設計終了後に開発段階の契約を行います。',
+        ),
+        array(
+            'img' => $dir_path . '/img/img-mv-1.jpg',
+            'read' => 'リード文：ダミーテキスト',
+            'title' => '開発開始',
+            'disc' => '開発開始です。定例会の設置により、進捗を確認することも可能です。納品に向け、責任を持って進めていきます。',
+        ),
+    );
+    
+    include 'template/flow.php'; ?>
 
     <?php
 
-    $services = array(
+    $results = array(
         // 掲載するサービス配列
         array(
             'img' => 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg',
@@ -97,14 +171,14 @@ include 'head.php'; // head.php の読み込み
         )
     );
 
-    include 'template/service.php';
+    include 'template/result.php';
 
     ?>
 
     <?php
 
     $sectionId = 'japan-team';
-    $sectionTitle = 'JAPAN TEAM';
+    $sectionTitle = 'PROJECT LEADER';
     $members = array(
         // 掲載するメンバー配列
         array(
@@ -134,7 +208,7 @@ include 'head.php'; // head.php の読み込み
     <?php
 
     $sectionId = 'global-team';
-    $sectionTitle = 'GLOBAL TEAM';
+    $sectionTitle = 'ENGINEER';
     $members = array(
         // 掲載するメンバー配列
         array(
@@ -161,20 +235,19 @@ include 'head.php'; // head.php の読み込み
 
     ?>
 
-    <?php // include 'template/recruit.php'; 
-    ?>
-    <?php // include 'template/sns.php'; 
-    ?>
-
     <?php include 'template/top-news.php'; ?>
 
-    <?php // include 'template/faq.php'; 
-    ?>
-
     <?php include 'template/contact.php'; ?>
+
     <?php include 'template/footer.php'; ?>
 
     <?php include 'foot.php'; ?>
+
+
+    <?php // include 'template/menu.php'; ?>
+    <?php // include 'template/recruit.php'; ?>
+    <?php // include 'template/sns.php'; ?>
+    <?php // include 'template/faq.php'; ?>
 </body>
 
 </html>
