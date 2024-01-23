@@ -6,7 +6,7 @@ $(function () {
   const changePointEle = $("#js-copy-change-point");
 
   if (changePointEle.length) {
-    $(window).scroll(function () {
+    $(window).on("load scroll", function () {
       const changeEleBottom = changeEle.offset().top + changeEle.outerHeight();
       const changePoint =
         changePointEle.offset().top + changePointEle.outerHeight();
@@ -21,16 +21,15 @@ $(function () {
 
 // on mask
 $(function () {
-  var scroll;
-  const changeEle = $(".js-on-mask");
-  const changeElePoint = changeEle.offset().top;
   $(window).on("scroll", function () {
-    scroll = $(window).scrollTop();
-    if (scroll >= changeElePoint) {
-      changeEle.addClass("on-mask");
-    } else {
-
-    }
+    $(".js-on-mask").each(function () {
+      var scroll = $(window).scrollTop();
+      var changeElePoint = $(this).offset().top;
+      if (scroll >= changeElePoint) {
+        $(this).addClass("on-mask");
+      } else {
+      }
+    });
   });
 });
 
@@ -52,58 +51,33 @@ $(function () {
   });
 });
 
-// slider generic
-$(function () {
-  function sliderSetting() {
-    var width = $(window).width();
-    if (width <= 768) {
-      $(".slide").not(".slick-initialized").slick({
-        autoplay: true,
-        autoplayspeed: 6000,
-        dots: true,
-        arrows: true,
-        prevArrow: '<span class="slide-arrow prev-arrow"></span>',
-        nextArrow: '<span class="slide-arrow next-arrow"></span>',
-        variableWidth: false,
-        adaptiveHeight: false,
-        slidesToShow: 1,
-      });
-    } else {
-      $(".slide.slick-initialized").slick("unslick");
-    }
-  }
-  sliderSetting();
-
-  $(window).resize(function () {
-    sliderSetting();
-  });
+var swiper = new Swiper('.js-slider', {
+  loop: true,
+  slidesPerView: 1,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
-// slider flow
-$(function () {
-  function sliderSetting() {
-    var width = $(window).width();
-    if (width <= 768) {
-      $(".slide-flow").not(".slick-initialized").slick({
-        autoplayspeed: 6000,
-        infinite: false,
-        dots: true,
-        arrows: true,
-        prevArrow: '<span class="slide-arrow prev-arrow"></span>',
-        nextArrow: '<span class="slide-arrow next-arrow"></span>',
-        variableWidth: false,
-        adaptiveHeight: false,
-        slidesToShow: 1,
-      });
-    } else {
-      $(".slide.slick-initialized").slick("unslick");
-    }
-  }
-  sliderSetting();
-
-  $(window).resize(function () {
-    sliderSetting();
-  });
+var swiperFlow = new Swiper(".js-slider-flow", {
+  loop: false,
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">0' + (index + 1) + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 // sticky

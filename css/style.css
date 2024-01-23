@@ -87,35 +87,35 @@ p {
   height: 100%;
 }
 
-.slick-slider {
-  margin-bottom: 5rem !important;
+.c-slider {
+  width: calc(100% + 2rem);
   margin-left: -1rem;
   margin-right: -1rem;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  padding-bottom: 4.8rem;
+  z-index: 1;
+  display: block;
 }
-
-.slick-track {
-  display: flex !important;
+.c-slider .swiper-slide {
+  padding: 0 1.6rem;
 }
-
-.slick-slide {
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
-  height: auto !important;
-}
-.slick-slide > div {
-  height: 100%;
-}
-
-.slide-arrow {
+.c-slider .swiper-button-next,
+.c-slider .swiper-button-prev {
   position: absolute;
-  bottom: -4rem;
+  top: auto;
+  left: auto;
+  bottom: 0;
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
   background-color: #eaeaea;
   z-index: 1;
 }
-.slide-arrow::after {
+.c-slider .swiper-button-next::after,
+.c-slider .swiper-button-prev::after {
   content: "";
   position: absolute;
   top: -0.25rem;
@@ -126,19 +126,24 @@ p {
   aspect-ratio: 1;
   background-color: #333;
 }
-.slide-arrow.prev-arrow {
+.c-slider .swiper-button-next.swiper-button-prev,
+.c-slider .swiper-button-prev.swiper-button-prev {
   right: 5.6rem;
   transform: scale(-1, 1);
 }
-.slide-arrow.next-arrow {
+.c-slider .swiper-button-next.swiper-button-next,
+.c-slider .swiper-button-prev.swiper-button-next {
   right: 1.6rem;
 }
-
-.slick-dots {
-  bottom: -3rem !important;
-  text-align: left !important;
-  padding-left: 1.6rem !important;
+.c-slider .swiper-pagination {
+  bottom: 1rem !important;
+  left: 2.4rem !important;
+  width: fit-content !important;
 }
+.c-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #333333;
+}
+
 .bg-light {
   background-color: #fafafa;
 }
@@ -433,15 +438,20 @@ p {
 .p-flow .section__header {
   margin-top: 4rem;
 }
-.p-flow__slider.slick-slider .slick-list {
-  padding-right: 10rem !important;
+.p-flow__slider {
+  position: relative;
+  padding-right: 3.6rem;
 }
-.p-flow__slider .slick-dots li {
-  width: auto;
-  height: auto;
+.p-flow__slider .swiper-slide {
+  width: 26rem;
 }
-.p-flow__slider .slick-dots li button {
-  display: block;
+.p-flow__slider .swiper-pagination {
+  bottom: 1rem !important;
+  left: 1.6rem !important;
+  width: fit-content !important;
+}
+.p-flow__slider .swiper-pagination .swiper-pagination-bullet {
+  display: inline-block;
   font-size: 1.4rem;
   font-weight: 700;
   width: auto;
@@ -451,25 +461,37 @@ p {
   color: #333333;
   opacity: 0.25;
   transition: all 0.4s;
+  width: auto;
+  height: auto;
+  background: none;
 }
-.p-flow__slider .slick-dots li button::before {
-  font-family: initial;
-  content: "0";
-  position: relative;
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: unset;
-  opacity: 1 !important;
-  -webkit-font-smoothing: unset;
-  -moz-osx-font-smoothing: unset;
-  transition: all 0.4s;
-}
-.p-flow__slider .slick-dots li.slick-active button {
+.p-flow__slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   font-size: 1.8rem;
   opacity: 1;
+  background: none;
 }
-.p-flow__slider .slick-dots li.slick-active button::before {
-  font-size: 1.7rem;
+.p-flow--item {
+  position: relative;
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 40rem !important;
+  padding: 2.4rem 1.6rem;
+  border-radius: 1.6rem;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+}
+.p-flow--item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.36);
 }
 .p-flow--item {
   position: relative;
@@ -977,17 +999,8 @@ p {
 .p-news {
   height: 215vh;
 }
-.p-news__slider {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.p-news__slider .slick-slide {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.p-news__slider .slick-dots {
-  bottom: -3rem;
-  left: 0;
+.p-news__slider .swiper-slide {
+  height: auto;
 }
 .p-news__wrap .p-news__item + .p-news__item {
   margin-top: 4rem;
@@ -1247,12 +1260,15 @@ p {
   text-decoration: underline;
 }
 
-.p-service__list.slick-slider {
+.p-service__list {
   margin-top: 3rem;
+}
+.p-service__list .swiper-slide {
+  width: 100% !important;
 }
 .p-service__list__item {
   position: relative;
-  height: 100%;
+  height: 100% !important;
   padding: 1.6rem;
   padding-bottom: 3.2rem;
   border-radius: 1.6rem;

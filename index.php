@@ -16,7 +16,7 @@ include 'head.php'; // head.php の読み込み
     <?php include 'template/mv01.php'; ?>
 
     <?php
-    // intro
+    // intro01
 
     $intro_title = 'GITEC GLOBAL LABO<br>について';
     $intro_desc = '国内企業4社が提携し、ベトナムに開発拠点を構えたグローバル開発チームです。';
@@ -25,19 +25,32 @@ include 'head.php'; // head.php の読み込み
     include 'template/intro.php'; ?>
 
     <?php
-    // about01
-    $about_title = 'スピーディーに開発';
-    $about_img = $dir_path . '/img/img-about.jpg';
-    $about_lead = '世界中のエンジニア / 日本中のパートナーと共にグローバルチームを構成。スピーディーかつ低コストでweb開発が可能。';
-    include 'template/about.php'; ?>
+    // intro02
+
+    $intro_title = '品質について';
+    $intro_desc = '日本人スタッフがヒアリングから品質管理までを国内で行います。<br>開発は、日本企業勤務経験者を中心に、ホーチミン工科大学などの博士号を取得した優秀なエンジニアが集まっています。';
+    $intro_bg = $dir_path . '/img/img-about.jpg';
+
+    include 'template/intro.php'; ?>
 
 
     <?php
-    // about02
-    $about_title = 'PMは日本スタッフが対応';
-    $about_img = $dir_path . '/img/img-about.jpg';
-    $about_lead = '日本人または日本語が堪能なPMがプロジェクトをリードするため、オフショア開発特有のコミュニケーションの問題は一切なし。';
-    include 'template/about.php'; ?>
+    // intro03
+
+    $intro_title = 'コミュニケーション<br>について';
+    $intro_desc = '日々の進捗情報を日本人国内スタッフが<br>お客様に共有、コミュニケーションは<br>全て日本語。<br>基本的にリモートでの打ち合わせですが、<br>必要な場面では直接お伺いさせて頂きます。';
+    $intro_bg = 'http://gitecs.xsrv.jp/niiyama-k/sample/wp/wp-content/uploads/2024/01/aig-ai230829B085-xl_TP_V4.jpg';
+
+    include 'template/intro.php'; ?>
+
+    <?php
+    // intro04
+
+    $intro_title = 'メリットについて';
+    $intro_desc = '豊富な人材が揃っておりスピーディーな開発が可能。<br>ベトナム在住エンジニアが開発するので大幅なコストダウンが見込めます。';
+    $intro_bg = $dir_path . '/img/img-about.jpg';
+
+    include 'template/intro.php'; ?>
 
     <?php include 'template/menu.php'; ?>
 
