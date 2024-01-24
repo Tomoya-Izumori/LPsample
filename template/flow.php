@@ -2,7 +2,7 @@
   <div class="sticky-wrapper">
     <div class="section__header">
       <h2 class="section__header--h2 f-outfit">PROFECT FLOW</h2>
-      <span class="section__header--h2--ja"><?php echo $type_title; ?></span>
+      <span class="section__header--h2--ja">開発フロー</span>
     </div>
     <div class="section__contents">
       <div class="p-flow__slider c-slider js-slider-flow">

@@ -3,7 +3,8 @@
 .p-news {
   $this: &;
 
-  height: 215vh;
+  height: 220vh;
+  
   &__slider {
     .swiper-slide {
       height: auto;

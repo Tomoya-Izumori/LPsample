@@ -265,7 +265,11 @@ p {
   }
 }
 .p-contact {
-  height: 105vh;
+  height: 112vh;
+}
+.p-contact .sticky-wrapper {
+  padding-top: 12vh;
+  background: #ffffff;
 }
 .p-contact__content__form {
   width: 100%;
@@ -285,7 +289,7 @@ p {
   padding: 1rem;
   border: 1px solid #d5d5d5;
   margin-top: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   border-radius: 0.25rem;
   background: #ffffff;
 }
@@ -296,8 +300,7 @@ p {
 .l-form-label {
   display: block;
   font-size: 1.4rem;
-  font-family: "Noto Serif JP", serif;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -343,7 +346,6 @@ p {
   color: white;
   text-align: center;
   font-size: 1.6rem;
-  font-family: "Noto Serif JP", serif;
   font-weight: bold;
   border-radius: 0.5rem;
 }
@@ -1035,7 +1037,7 @@ p {
 }
 
 .p-news {
-  height: 215vh;
+  height: 220vh;
 }
 .p-news__slider .swiper-slide {
   height: auto;
@@ -1371,25 +1373,37 @@ p {
   padding: 0 2rem;
   line-height: 1.56;
 }
+.p-service--inner {
+  padding: 2.4rem 1.6rem;
+  border-radius: 1.6rem;
+  background: #ffffff;
+}
 .p-service--list {
-  margin-top: 2rem;
-  margin-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 2rem;
 }
 .p-service--item {
   position: relative;
-  font-size: 2.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-weight: 900;
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
+  width: calc(50% - 1rem);
+  text-align: center;
 }
-.p-service--item::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 6.4rem;
-  height: 0.4rem;
-  background-color: #333333;
+.p-service--item img {
+  width: 6rem;
+  height: 6rem;
+}
+.p-service--item p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: auto;
+}
+.p-service--item.-small img {
+  width: 5rem;
+  height: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,10 @@
 .p-contact {
+  height: 112vh;
 
-  height: 105vh;
+  .sticky-wrapper {
+    padding-top: 12vh;
+    background: #ffffff;
+  }
 
   &__content {
     &__form {
@@ -19,7 +23,6 @@
 }
 
 .l-form {
-
   &-select,
   &-input,
   &-area {
@@ -28,7 +31,7 @@
     padding: 1rem;
     border: 1px solid #d5d5d5;
     margin-top: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     border-radius: 0.25rem;
     background: #ffffff;
   }
@@ -41,8 +44,8 @@
 .l-form-label {
   display: block;
   font-size: 1.4rem;
-  font-family: "Noto Serif JP", serif;
-  font-weight: bold;
+  // font-family: "Noto Serif JP", serif;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -89,7 +92,7 @@
   color: white;
   text-align: center;
   font-size: 1.6rem;
-  font-family: "Noto Serif JP", serif;
+  // font-family: "Noto Serif JP", serif;
   font-weight: bold;
   border-radius: 0.5rem;
 }
