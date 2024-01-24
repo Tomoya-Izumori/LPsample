@@ -24,10 +24,18 @@ $(function () {
   $(window).on("scroll", function () {
     $(".js-on-mask").each(function () {
       var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
       var changeElePoint = $(this).offset().top;
-      if (scroll >= changeElePoint) {
-        $(this).addClass("on-mask");
+      var windowMiddlePoint = scroll + (windowHeight / 2);
+
+      if ($(window).width() >= 768) {
+        if (windowMiddlePoint >= changeElePoint) {
+          $(this).addClass("on-mask");
+        }
       } else {
+        if (scroll >= changeElePoint) {
+          $(this).addClass("on-mask");
+        }
       }
     });
   });

@@ -1,8 +1,17 @@
+@use "../global" as *;
+
 .p-mv01 {
+  @include ov-sp {
+    height: 66.7rem;
+    padding: 0;
+  }
   .sticky-wrapper {
     background-image: url("../img/img-mv-1.jpg");
     background-position: center;
     background-size: cover;
+    @include ov-sp {
+      height: 100%;
+    }
 
     &::before {
       content: "";

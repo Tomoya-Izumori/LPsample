@@ -1,5 +1,20 @@
+@use "../global" as *;
+
 .p-intro {
   $this: &;
+
+  @include ov-sp {
+    height: 66.7rem;
+    padding: 0;
+    .sticky-wrapper {
+      width: calc(100% + 4.4rem);
+      height: 100%;
+      margin: 0 -2.2rem;
+    }
+    .sticky-inner {
+      height: 100%;
+    }
+  }
 
   &--bg {
     position: relative;
@@ -28,6 +43,9 @@
     height: fit-content;
     padding: 0 2.4rem;
     z-index: 1;
+    @include ov-sp {
+      padding: 0 4.8rem;      
+    }
   }
   &--title {
     font-size: 2.6rem;

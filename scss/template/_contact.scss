@@ -1,9 +1,18 @@
+@use "../global" as *;
+
 .p-contact {
   height: 112vh;
+  @include ov-sp {
+    height: auto;
+    background: #ffffff;
+  }
 
   .sticky-wrapper {
     padding-top: 12vh;
     background: #ffffff;
+    @include ov-sp {
+      padding-top: 0;
+    }
   }
 
   &__content {

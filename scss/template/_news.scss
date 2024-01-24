@@ -4,6 +4,9 @@
   $this: &;
 
   height: 220vh;
+  @include ov-sp {
+    height: auto;    
+  }
   
   &__slider {
     .swiper-slide {
@@ -15,8 +18,6 @@
       + #{$this}__item {
         margin-top: 4rem;
       }
-    }
-    @include sp {
     }
   }
   &__item {
@@ -86,64 +87,43 @@
     padding-bottom: 3rem;
     border-bottom: solid 1px #000000;
     > * + * {
-      margin-top: 6rem;
-      @include sp {
-        margin-top: 3rem;
-      }
+      margin-top: 3rem;
     }
     h1 {
       position: relative;
-      font-size: 3.8rem;
+      font-size: 2.4rem;
       font-weight: 600;
-      margin-bottom: 7.2rem;
+      margin-bottom: 3rem;
       padding-bottom: 1.5rem;
-      padding-left: 6rem;
+      padding-left: 3rem;
+      padding-bottom: 1rem;
       line-height: 1.3;
       border-bottom: solid 0.2rem #000000;
-      @include sp {
-        font-size: 2.4rem;
-        margin-bottom: 3rem;
-        padding-left: 3rem;
-        padding-bottom: 1rem;
-      }
       &::before {
         content: "";
         position: absolute;
-        top: 2.4rem;
+        top: 1.7rem;
         left: 0;
-        width: 3.5rem;
-        height: 0.6rem;
+        width: 1.8rem;
+        height: 0.3rem;
         background-color: #000000;
-        @include sp {
-          top: 1.7rem;
-          left: 0;
-          width: 1.8rem;
-          height: 0.3rem;
-        }
       }
     }
     h2 {
       position: relative;
-      font-size: 3.8rem;
+      font-size: 2.1rem;
       font-weight: 600;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
       padding-bottom: 1rem;
       line-height: 1.3;
-      @include sp {
-        font-size: 2.1rem;
-        margin-bottom: 3rem;
-      }
       &::after {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 7rem;
+        width: 5rem;
         height: 0.2rem;
         background-color: #000000;
-        @include sp {
-          width: 5rem;
-        }
       }
     }
     h3 {
@@ -153,8 +133,6 @@
       line-height: 1.56;
       color: #ffffff;
       background-color: #000000;
-      @include sp {
-      }
     }
     h4 {
       position: relative;
@@ -170,11 +148,8 @@
       font-weight: 600;
     }
     p {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       line-height: 1.7;
-      @include sp {
-        font-size: 1.4rem;
-      }
       + p {
         margin-top: 2em;
       }
@@ -183,7 +158,7 @@
       color: #000000;
       text-decoration: underline;
       &:hover {
-        @include pc {
+        @include ov-sp {
           text-decoration: none;
         }
       }
@@ -195,20 +170,15 @@
       overflow: hidden;
     }
     figcaption {
+      font-size: 1.6rem;
       font-weight: 500;
-      @include sp {
-        font-size: 1.6rem;
-      }
     }
     ul {
       li {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         position: relative;
         padding-left: 1.3em;
         line-height: 1.7;
-        @include sp {
-          font-size: 1.4rem;
-        }
         &::before {
           content: "・";
           position: absolute;
@@ -220,11 +190,8 @@
       list-style: decimal;
       margin-left: 1.3em;
       li {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.7;
-        @include sp {
-          font-size: 1.4rem;
-        }
         &::before {
         }
       }
@@ -243,8 +210,9 @@
         display: block;
         font-size: 1.6rem;
         width: fit-content;
-        min-width: 36rem;
-        padding: 3rem 5rem;
+        min-width: 30.8rem;
+        margin: 5rem auto 0;
+        padding: 1.5rem 1rem;
         letter-spacing: 0.1em;
         text-align: center;
         color: #ffffff;
@@ -255,13 +223,8 @@
         overflow: hidden;
         outline-offset: 0.75rem;
         text-decoration: none;
-        @include sp {
-          min-width: 30.8rem;
-          margin: 5rem auto 0;
-          padding: 1.5rem 1rem;
-        }
         &:hover {
-          @include pc {
+          @include ov-sp {
             color: #000000;
             background-color: #ffffff;
           }

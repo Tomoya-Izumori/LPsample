@@ -4,19 +4,17 @@ $textcolor-dark: #333;
 $base-color: #fff;
 
 //font
-
 .f-serif {
   font-family: "Noto Serif JP", serif;
 }
-
 .f-sans {
   font-family: "Noto Sans JP", sans-serif;
 }
-
 .f-outfit {
   font-family: "Outfit", sans-serif;
 }
 
+// common
 html {
   font-size: 0.7320644217vw; //1rem = 10px
   font-family: "Noto Sans JP", sans-serif;
@@ -26,60 +24,124 @@ html {
     font-size: 2.666666667vw;
   }
 
-  @include ov-pc {
-    font-size: 67.5%;
+  @include ov-sp {
+    font-size: 62.5%;
+  }
+
+  // @include ov-pc {
+  //   font-size: 67.5%;
+  // }
+}
+
+body {
+  @include ov-sp {
+    background-image: url(../img/bg_common.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: luminosity;
+    background-color: #000000;
+    &::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0 0 0 / 28%);
+    }
   }
 }
 
 h1 {
-  @include sp {
-    font-size: 3.6rem;
-    font-weight: bold;
-    line-height: calc(3.6rem * 1.25);
-  }
+  font-size: 3.6rem;
+  font-weight: bold;
+  line-height: calc(3.6rem * 1.25);
 }
-
 h2 {
   font-size: 2.4rem;
 }
-
 h3 {
 }
-
 p {
   font-size: 1.6rem;
   line-height: 3.2rem;
 }
 
-.sticky-wrapper {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 1rem;
+// layout
+.l-container {
+  width: 87.5%;
+  margin: 0 auto;
+  @include ov-sp {
+    width: calc(48rem * 0.875);
+    margin-left: calc(48rem * 0.0625);
+  }
+}
+.l-contents {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: #fafafa;
 }
 
+@include ov-sp {
+  .l-main-container {
+    position: relative;
+    max-width: 48rem;
+    margin: auto;
+  }
+  .l-side-container {
+    width: calc((100% - 48rem) / 2);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    &.-left {
+      left: 0;
+    }
+    &.-right {
+      right: 0;
+    }
+  }
+}
+
+// sticky
 .sticky {
   height: 180vh;
   display: block;
   background-color: #fafafa;
   position: sticky;
   top: 0;
-}
-
-.sticky-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @include ov-sp {
+    height: fit-content;
+    position: relative;
+  }
+  &-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    @include ov-sp {
+      height: fit-content;
+      position: relative;
+      padding: 0 3.2rem;
+    }
+  }
+  &-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include ov-sp {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 // swiper slider
-
 .c-slider {
   width: calc(100% + 2rem);
   margin-left: -1rem;
@@ -91,10 +153,17 @@ p {
   padding-bottom: 4.8rem;
   z-index: 1;
   display: block;
+  @include ov-sp {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
   .swiper-wrapper {
   }
   .swiper-slide {
     padding: 0 1.6rem;
+    @include ov-sp {
+      padding: 0 1.6rem;
+    }
   }
 
   .swiper-button-next,
@@ -114,7 +183,9 @@ p {
       top: -0.25rem;
       left: -0.25rem;
       display: block;
-      clip-path: path("M 23.5587 16.916 C 24.1447 17.5 24.1467 18.446 23.5647 19.034 L 16.6077 26.056 C 16.3147 26.352 15.9287 26.5 15.5427 26.5 C 15.1607 26.5 14.7787 26.355 14.4867 26.065 C 13.8977 25.482 13.8947 24.533 14.4777 23.944 L 20.3818 17.984 L 14.4408 12.062 C 13.8548 11.478 13.8528 10.5279 14.4378 9.941 C 15.0218 9.354 15.9738 9.353 16.5588 9.938 L 23.5588 16.916 L 23.5587 16.916 Z");
+      clip-path: path(
+        "M 23.5587 16.916 C 24.1447 17.5 24.1467 18.446 23.5647 19.034 L 16.6077 26.056 C 16.3147 26.352 15.9287 26.5 15.5427 26.5 C 15.1607 26.5 14.7787 26.355 14.4867 26.065 C 13.8977 25.482 13.8947 24.533 14.4777 23.944 L 20.3818 17.984 L 14.4408 12.062 C 13.8548 11.478 13.8528 10.5279 14.4378 9.941 C 15.0218 9.354 15.9738 9.353 16.5588 9.938 L 23.5588 16.916 L 23.5587 16.916 Z"
+      );
       height: 3.2rem;
       aspect-ratio: 1;
       background-color: #333;
@@ -140,44 +211,42 @@ p {
   }
 }
 
-.bg-light {
-  background-color: #fafafa;
-}
-
-.bg-dark {
-  background-color: #333;
-}
-
-.section__header {
-  margin-bottom: 2rem;
-
-  &--h2 {
-    font-size: 2.4rem;
-    font-weight: bold;
-    text-align: center;
-
-    &--ja {
-      display: block;
-      font-size: 1.3rem;
-      font-weight: normal;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
+// bg
+.bg {
+  &-light {
+    background-color: #fafafa;
+  }
+  &-dark {
+    background-color: #333;
   }
 }
 
-.section__contents {
+// section
+section {
+  @include ov-sp {
+    padding: 4rem 0;
+  }
 }
+.section {
+  &__header {
+    margin-bottom: 2rem;
 
-.l-container {
-  width: 87.5%;
-  margin: 0 auto;
-}
+    &--h2 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-align: center;
 
-.l-contents {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background-color: #fafafa;
+      &--ja {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: normal;
+        margin-top: 0.5rem;
+        text-align: center;
+      }
+    }
+  }
+  &__contents {
+  }
 }
 
 .p-page {
